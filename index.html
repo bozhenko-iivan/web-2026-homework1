@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+    <main class="container">
+        <section class="buy-list">
+            <div class="add-item-bar">
+                <input type="text" class="input-add" placeholder="Назва товару" aria-label="Введіть назву товару">
+                <button class="btn-add" data-tooltip="Додати новий товар до списку">Додати</button>
+            </div>
+            
+            <ul class="items-list">
+                <li class="item">
+                    <span class="item-name strike-through">Помідори</span>
+                    <div class="item-controls">
+                        <span class="item-quantity">2</span>
+                    </div>
+                    <div class="item-status">
+                        <button class="btn-state" data-tooltip="Змінити статус товару">Не куплено</button>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <span class="item-name">Печиво</span>
+                    <div class="item-controls">
+                        <button class="btn-minus" data-tooltip="Зменшити кількість" aria-label="Зменшити">-</button>
+                        <span class="item-quantity">2</span>
+                        <button class="btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити">+</button>
+                    </div>
+                    <div class="item-status">
+                        <button class="btn-state" data-tooltip="Змінити статус товару">Куплено</button>
+                        <button class="btn-delete" data-tooltip="Видалити товар" aria-label="Видалити">×</button>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <input type="text" class="item-edit-input" value="Сир">
+                    <div class="item-controls">
+                        <button class="btn-minus" disabled data-tooltip="Зменшити кількість" aria-label="Зменшити">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити">+</button>
+                    </div>
+                    <div class="item-status">
+                        <button class="btn-state" data-tooltip="Змінити статус товару">Куплено</button>
+                        <button class="btn-delete" data-tooltip="Видалити товар" aria-label="Видалити">×</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <aside class="statistics">
+            <div class="stats-section">
+                <h2>Залишилося</h2>
+                <div class="stats-items left-items">
+                    <div class="stat-badge">Печиво <span class="stat-count">2</span></div>
+                    <div class="stat-badge">Сир <span class="stat-count">1</span></div>
+                </div>
+            </div>
+            
+            <div class="stats-section border-top">
+                <h2>Куплено</h2>
+                <div class="stats-items bought-items">
+                    <div class="stat-badge strike-through">Помідори <span class="stat-count">2</span></div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <div class="student-badge">
+        <span class="badge-title">BuyList</span>
+        <span class="badge-author">Іван Боженко</span>
+    </div>
+</body>
+</html>
